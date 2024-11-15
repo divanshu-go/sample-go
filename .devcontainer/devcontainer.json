@@ -10,6 +10,13 @@
 			]
 		}
 	},
+	"runArgs": [
+		"-e", "DISPLAY=$DISPLAY",
+		"-v", "/tmp/.X11-unix:/tmp/.X11-unix"
+	],
+	"containerEnv": {
+		"DISPLAY": "$DISPLAY"
+	},
 
 	// Use 'postCreateCommand' to run commands after the container is created.
 	"postCreateCommand": "go test -v"
